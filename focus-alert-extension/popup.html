@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Alert System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 Focus Alert</h1>
+      <p class="subtitle">Stay on track with your goals</p>
+    </header>
+
+    <!-- YouTube Monitoring Toggle -->
+    <section class="youtube-section">
+      <div class="toggle-container">
+        <span class="toggle-label">🚫 YouTube Distraction Blocker</span>
+        <label class="switch">
+          <input type="checkbox" id="youtubeToggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <p class="hint">Get motivational alerts after 30 min on YouTube</p>
+    </section>
+
+    <!-- Add Task Form -->
+    <section class="add-task-section">
+      <h2>➕ Add New Reminder</h2>
+      <form id="taskForm">
+        <div class="form-group">
+          <label for="taskTitle">Task Title</label>
+          <input type="text" id="taskTitle" placeholder="e.g., Create website post" required>
+        </div>
+
+        <div class="form-group">
+          <label for="taskMessage">Alert Message (optional)</label>
+          <textarea id="taskMessage" placeholder="e.g., Time to write that blog post!" rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="taskType">Reminder Type</label>
+          <select id="taskType" required>
+            <option value="random_interval">Random Interval (20-40 min)</option>
+            <option value="interval">Regular Interval</option>
+            <option value="specific_time">Specific Date/Time</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="intervalGroup" style="display: none;">
+          <label for="intervalMinutes">Interval (minutes)</label>
+          <input type="number" id="intervalMinutes" min="1" max="1440" value="60">
+        </div>
+
+        <div class="form-group" id="dateTimeGroup" style="display: none;">
+          <label for="scheduledTime">Schedule For</label>
+          <input type="datetime-local" id="scheduledTime">
+        </div>
+
+        <button type="submit" class="btn-primary">Add Reminder</button>
+      </form>
+    </section>
+
+    <!-- Task List -->
+    <section class="tasks-section">
+      <h2>📋 Your Reminders</h2>
+      <div id="taskList" class="task-list">
+        <p class="empty-state">No reminders yet. Add one above!</p>
+      </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+      <h2>⚡ Quick Add</h2>
+      <div class="quick-buttons">
+        <button class="btn-quick" data-type="random_interval" data-title="Create Website Post">
+          🌐 Website Post
+        </button>
+        <button class="btn-quick" data-type="interval" data-title="Check Messages" data-interval="30">
+          💬 Check Messages
+        </button>
+        <button class="btn-quick" data-type="interval" data-title="Check New Registrations" data-interval="60">
+          👥 Check Registrations
+        </button>
+        <button class="btn-quick" data-type="interval" data-title="Write Book Chapter" data-interval="90">
+          📖 Write Book
+        </button>
+        <button class="btn-quick" data-type="interval" data-title="Create Social Media Post" data-interval="120">
+          📱 Social Media Post
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
