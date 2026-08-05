@@ -1,0 +1,61 @@
+{
+  "tasks": [
+    {
+      "name": "Create website post",
+      "task_type": "random_interval",
+      "interval_minutes": [
+        20,
+        40
+      ],
+      "scheduled_time": null,
+      "custom_message": "\u23f0 Time to create a post on your website!",
+      "enabled": true,
+      "last_triggered": null,
+      "next_trigger": "2026-08-05T03:25:03.469114"
+    },
+    {
+      "name": "Write book",
+      "task_type": "recurring",
+      "interval_minutes": 60,
+      "scheduled_time": null,
+      "custom_message": "\ud83d\udcda Time to write your book! Your story awaits!",
+      "enabled": true,
+      "last_triggered": null,
+      "next_trigger": "2026-08-05T04:02:03.469139"
+    },
+    {
+      "name": "Create social media posts",
+      "task_type": "random_interval",
+      "interval_minutes": [
+        30,
+        60
+      ],
+      "scheduled_time": null,
+      "custom_message": "\ud83d\udcf1 Time to create social media posts for your brand!",
+      "enabled": true,
+      "last_triggered": null,
+      "next_trigger": "2026-08-05T03:59:03.469150"
+    },
+    {
+      "name": "Check messages",
+      "task_type": "recurring",
+      "interval_minutes": 30,
+      "scheduled_time": null,
+      "custom_message": "\ud83d\udcac Time to check your messages!",
+      "enabled": true,
+      "last_triggered": null,
+      "next_trigger": "2026-08-05T03:32:03.469156"
+    },
+    {
+      "name": "Check new registrations",
+      "task_type": "recurring",
+      "interval_minutes": 45,
+      "scheduled_time": null,
+      "custom_message": "\ud83d\udccb Time to check new registrations!",
+      "enabled": true,
+      "last_triggered": null,
+      "next_trigger": "2026-08-05T03:47:03.469161"
+    }
+  ],
+  "youtube_threshold_minutes": 30
+}
