@@ -1,0 +1,45 @@
+{
+  "name": "task-master",
+  "version": "1.0.0",
+  "description": "Desktop Task & Calendar Manager with Notifications",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win",
+    "build:portable": "electron-builder --win portable"
+  },
+  "keywords": ["task", "calendar", "productivity", "desktop"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.taskmaster.app",
+    "productName": "Task Master",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Task Master"
+    },
+    "files": [
+      "**/*",
+      "!**/*.md",
+      "!.gitignore"
+    ]
+  }
+}
